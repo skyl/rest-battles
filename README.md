@@ -3,9 +3,15 @@ rest-battles
 
 Example Flask app for best practices practice. We talkin' about practice?
 
-I'm very familiar with Django and Ansible.
-Built this example app to help broaden my horizons slightly
-- Flask, SQLAlchemy, Docker, Packer ...
+I'm very familiar with Django and Ansible,
+built this example app to help broaden my horizons slightly
+- Flask, SQLAlchemy, Docker, Python3, ... Packer ...
+
+You have to have python3 installed.
+
+Once you have an environment with the correct python and pip on your PATH, you can:
+
+    pip install -r requirements.txt
 
 Run the tests against sqlite in memory:
 
