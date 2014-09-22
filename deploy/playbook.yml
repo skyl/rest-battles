@@ -1,0 +1,33 @@
+
+- hosts: postgres
+  user: root
+  connection: local
+  tasks:
+  - name: install dependencies
+    apt: name={{ item }} state=latest
+    with_items:
+    - postgis
+  # TODO:
+  #   create user
+  #   pg_hba.conf user permissions
+  #   create database
+  #   configure
+  #   ensure running
+  # - name: pg_hba.conf
+  #  template: src=/templates/pg_hba.conf dest=
+
+
+- hosts: flask
+  user: root
+  connection: local
+  tasks:
+  - name: install system dependencies
+    apt: name={{ item }} state=latest
+    with_items:
+    - git
+    - build-essential
+    - libncurses5-dev
+    - python3-psycopg2
+    - python3-pip
+  - name: pip install -r requirements
+    pip: requirements=/requirements.txt executable=pip3

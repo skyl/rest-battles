@@ -1,0 +1,8 @@
+[local]
+localhost
+
+[flask]
+localhost
+
+[postgres]
+localhost
